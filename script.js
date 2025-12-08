@@ -43,4 +43,34 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }
     });
+
+
+    // Galería 
+    gsap.from(".columna-imagenes img", {
+        opacity: 0,
+        y: 50,
+        scale: 0.9,
+        duration: 1,
+        stagger: 0.2, 
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: "#galeria-interactiva",
+            start: "top 75%",               
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".columna-texto h2, .columna-texto p, .columna-texto .boton-galeria", {
+        opacity: 0,
+        x: 50, 
+        duration: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".columna-texto",
+            start: "top 75%",
+            toggleActions: "play none none none"
+        }
+    });
+    
 });
