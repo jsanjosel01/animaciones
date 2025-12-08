@@ -72,5 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: "play none none none"
         }
     });
-    
+
+    // CTA, Ícono/Logo 
+    gsap.from("#iconologo img", {
+        opacity: 0,
+        scale: 0.5,
+        rotation: 45,
+        duration: 1.2,
+        ease: "back.out(1.7)", // Efecto de rebote 
+        scrollTrigger: {
+            trigger: "#iconologo",
+            start: "top 85%",
+            toggleActions: "play none none none"
+        }
+    });
+
 });
