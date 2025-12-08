@@ -111,27 +111,45 @@ nav a:hover {
 }
 
 
-#exposiciones, #ediciones {
+#ediciones {
     text-align: center;
     background-color: #ffffff; 
     border-bottom: 1px solid #eeeeee;
 }
 
-#exposiciones, #ediciones h2 {
+#ediciones h2 {
     font-size: 3em;
     color: #000000;
     margin-bottom: 10px;
 }
 
-#exposiciones, #ediciones p {
+#ediciones p {
     font-size: 1.2em;
     font-style: italic;
     color: #666666;
 }
 
+
+#exposiciones {
+    /* Define el ancho máximo y centra la sección en la página */
+    padding: 60px 5%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    
+    /* El título h2 está centrado en el HTML, por lo que este estilo aplica bien: */
+    text-align: center;
+}
+
+#exposiciones h2 {
+    font-size: 3.5em; /* Tamaño grande para el encabezado de la sección */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+
 /* Botón de descargao */
 #expo-button {
-    background-color: var(--accent-color);
+    background-color: var(--dark-color);
     color: var(--light-color);          
     border: 1px solid #4b0606;
     padding: 10px 30px;
@@ -152,6 +170,74 @@ nav a:hover {
 }
 
 
+.articulos-grid {
+    display: flex;
+    gap: 40px; /* Espacio entre las columnas */
+    margin-top: 40px; 
+    margin-bottom: 60px;
+}
+
+/* Estilo de la tarjeta individual */
+.articulos-grid article {
+    flex: 1; /* Hace que cada artículo ocupe la mitad del espacio */
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; 
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.articulos-grid article:hover {
+    transform: translateY(-5px);
+}
+
+
+.articulos-grid {
+    display: flex;
+    gap: 40px; 
+    margin-top: 40px; 
+    margin-bottom: 60px;
+}
+
+.articulos-grid article {
+    flex: 1; 
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s;
+    text-align: left; 
+}
+
+.articulos-grid article:hover {
+    transform: translateY(-5px); 
+}
+
+.articulos-grid article img {
+    width: 100%; 
+    height: auto;      
+    display: block;    
+    margin-bottom: 20px; 
+    object-fit: cover; 
+}
+
+.articulos-grid article h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.articulos-grid article p {
+    color: #555555;
+}
 
 
 /* Footer */
