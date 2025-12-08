@@ -27,4 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ease: "power3.out",
         delay: 0.2    
     });
+
+    // Titulos h2
+    gsap.from("#ediciones h2", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        
+        scrollTrigger: {
+            trigger: "#ediciones", 
+            start: "top 80%",   
+  
+            toggleActions: "play none none none" //solo se ejecuta 1 vez.
+            
+        }
+    });
 });
