@@ -29,12 +29,12 @@ h1, h2, h3 {
 }
 
 
-/* Centrado general de secciones de contenido */
+/* Centrado general del contenido */
 #ediciones, 
 #exposiciones {
     padding: 60px 5%; 
-    max-width: 1200px; /* Ancho máximo para el contenido */
-    margin: 0 auto; /* Centrado horizontal */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
@@ -120,28 +120,28 @@ nav a:hover {
 #ediciones h2 {
     font-size: 3em;
     color: #000000;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #ediciones p {
     font-size: 1.2em;
     font-style: italic;
     color: #666666;
+
+    margin-bottom: 10px;
 }
 
 
 #exposiciones {
-    /* Define el ancho máximo y centra la sección en la página */
     padding: 60px 5%; 
     max-width: 1200px; 
     margin: 0 auto; 
     
-    /* El título h2 está centrado en el HTML, por lo que este estilo aplica bien: */
     text-align: center;
 }
 
 #exposiciones h2 {
-    font-size: 3.5em; /* Tamaño grande para el encabezado de la sección */
+    font-size: 3.5em;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
@@ -320,8 +320,6 @@ nav a:hover {
     height: auto;
     margin: 0 auto; 
     display: block;
-    
-    
     opacity: 1; 
 }
 

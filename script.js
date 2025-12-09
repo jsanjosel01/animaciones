@@ -87,4 +87,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Usamos querySelector para encontrar el botón
+    const galleryButton = document.querySelector('.boton-galeria'); 
+
+    // Verificamos si existe
+    if (galleryButton) { 
+        
+        const pulseTimeline = gsap.timeline({
+            repeat: -1,
+            yoyo: true,
+            repeatDelay: 1
+        });
+
+        pulseTimeline.to(galleryButton, {
+            duration: 0.8,
+            scale: 1.05, 
+            ease: "power1.inOut",
+            transformOrigin: "center center"
+        });
+    }
+
+    // Animación GSAP Extra en la galeria, se moveran las img al pasar el ratón.
+    gsap.utils.toArray(".columna-imagenes img").forEach(img => {
+        
+        
+        img.addEventListener('mouseenter', () => {
+            gsap.to(img, {
+                duration: 0.3,
+                scale: 1.08, 
+                rotation: 2,
+                filter: "brightness(1.1)",
+                ease: "power2.out"
+            });
+        });
+
+        
+        img.addEventListener('mouseleave', () => {
+            gsap.to(img, {
+                duration: 0.5,
+                scale: 1,           
+                rotation: 0,       
+                filter: "brightness(1)", 
+                ease: "elastic.out(1, 0.5)" 
+            });
+        });
 });
+    
+});
+    
+
+
