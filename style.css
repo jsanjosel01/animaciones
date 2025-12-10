@@ -32,7 +32,7 @@ h1, h2, h3 {
 /* Centrado general del contenido */
 #ediciones, 
 #exposiciones {
-    padding: 60px 5%; 
+    padding: 80px 5%; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -42,7 +42,7 @@ h1, h2, h3 {
 header {
     background-color: var(--dark-color);
     color: var(--light-color);
-    padding: 5px 30px; 
+    padding: 5px 60px; 
 
     display: flex;
     justify-content: space-between; 
@@ -128,12 +128,12 @@ nav a:hover {
     font-style: italic;
     color: #666666;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 
 #exposiciones {
-    padding: 60px 5%; 
+    padding: 80px 5%; 
     max-width: 1200px; 
     margin: 0 auto; 
     
@@ -327,7 +327,7 @@ nav a:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: #000000;
     color: #ffffff;
     font-size: 0.9em;
@@ -338,4 +338,115 @@ footer hr {
     height: 1px;
     background-color: var(--accent-color);
     margin-bottom: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 640px) {
+
+    #ediciones, 
+    #exposiciones {
+        padding: 30px 2%; /* Padding más reducido */
+        margin: 0 auto;
+    }
+
+
+    #ediciones h2, 
+    #exposiciones h2 {
+        font-size: 2em; /* Títulos grandes */
+    }
+
+    
+    header {
+        padding: 10px 15px; /* Menos padding lateral */
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .logo img {
+        max-height: 55px; /* Logo más pequeño */
+        margin-bottom: 8px;
+    }
+
+    nav ul {
+        flex-direction: column; /* La lista se vuelve vertical */
+        gap: 8px; 
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    nav a {
+        padding: 3px 0;
+        font-size: 0.95em;
+    }
+
+    
+    #inicio {
+        height: 35vh; /* Altura aún más reducida */
+    }
+
+    #inicio h1 {
+        font-size: 2.2em; /* Texto principal más pequeño */
+        padding: 0 10px;
+    }
+
+    .articulos-grid {
+        flex-direction: column;
+        gap: 20px; 
+        margin-top: 15px;
+    }
+    
+    .articulos-grid article {
+        padding: 15px;
+    }
+
+    .articulos-grid article h3 {
+        font-size: 1.4em; 
+    }
+    
+    #galeria-interactiva {
+        margin: 30px 2%;
+        padding: 20px 2%;
+    }
+
+    /* Apilar la columna de imágenes y la columna de texto */
+    .galeria-contenido-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    /* Quitar el padding extra de la columna de texto */
+    .columna-texto {
+        padding-left: 0;
+        text-align: center; 
+    }
+
+    .columna-texto h2 {
+        font-size: 1.8em;
+    }
+
+    /* Ajustar el grid de imágenes */
+    .columna-imagenes {
+        gap: 8px;
+    }
+
+    /* Reducir la altura de las imágenes */
+    .columna-imagenes img {
+        height: 100px; 
+    }
+
+    /* La imagen larga */
+    .columna-imagenes img:nth-child(3) {
+        height: 150px;
+    }
+
+    #iconologo {
+        padding: 30px 0;
+    }
+
+    footer {
+        padding: 15px 10px;
+        font-size: 0.85em;
+    }
+
 }
